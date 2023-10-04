@@ -1,0 +1,115 @@
+.product {
+    display: flex;
+    gap: 66px;
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 40px;
+        color: var(--product);
+        font-size: 18px;
+    
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+    
+        p {
+            width: 338px;
+            font-weight: 300;
+        }
+    
+    }
+    
+    .section {
+        color: var(--primary);
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .sizelist {
+        display: flex;
+        gap: 10px;
+        button {
+            width: 32px;
+            height: 32px;
+            font-size: 10px;
+    
+            &:hover {
+                background-color: var(--primary);
+                color: var(--btn-default);
+                transition: all 0.2s ease;
+            }
+        }
+    }
+    
+    .highlight_btn {
+        background-color: var(--primary) !important;
+        filter: var(--btn-shadow);
+        color: var(--btn-default);
+    }
+    
+    .fullPrice {
+        font-weight: 200;
+        font-style: italic;
+        text-decoration: line-through;
+    }
+    
+    .newPrice {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+    
+        span {
+            background-color: var(--disccount-tag);
+            color: var(--primary);
+            padding: 5px 9px;
+            font-weight: 700;
+            border-radius: 6px;
+            user-select: none;
+        }
+    }
+    
+    .cart_actions {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .quantity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-weight: 700;
+        width: 155px;
+        background-color: var(--btn-default);
+        user-select: none;
+    
+        button {
+            font-size: 20px;
+            color: var(--primary);    
+        }
+    }
+    
+    .addToCart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        color: var(--btn-default);
+        background-color: var(--primary);
+        filter: var(--btn-shadow);
+        width: 207px;
+        height:57px ;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+}

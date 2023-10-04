@@ -9,8 +9,8 @@ export default function CartControl() {
 
   return (
     <div className='control'>
-    <Cart />
-    {cartItems.length > 0 && <span className='signal'></span>}
-  </div>
+      <Cart />
+      {cartItems.length > 0 && <span className='signal'></span>}
+    </div>
   );
 }

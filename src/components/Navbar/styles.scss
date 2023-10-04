@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 2.5rem;
-    margin-inline: 60px;
     margin-block-start: 60px;
     border-bottom: 1px solid #AFAFAF;
     
@@ -26,24 +25,24 @@
         li {
             font-size: 22px;
             font-weight: 400;
+            cursor: pointer;
         }
     }
-}
-
-
-.title{
-    color: var(--logo);
-    font-size: 26px;
-    font-weight: 700;
-    a {
-        text-decoration: none;
-        color: inherit;
+    
+    .title {
+        color: var(--logo);
+        font-size: 26px;
+        font-weight: 700;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
-}
-
-.profile {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    object-fit: cover;
+    
+    .profile {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
 }

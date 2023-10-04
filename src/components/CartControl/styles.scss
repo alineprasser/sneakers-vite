@@ -1,13 +1,12 @@
 .control {
     position: relative;
-}
-
-.signal {
-    width: 15px;
-    height: 15px;
-    border-radius: 20px;
-    background: var(--primary);
-    position: absolute;
-    right: 0;
-    margin-right: -6px;
+    .signal {
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        background: var(--primary);
+        position: absolute;
+        right: 0;
+        margin-right: -6px;
+    }
 }
