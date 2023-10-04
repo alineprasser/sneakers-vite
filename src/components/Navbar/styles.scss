@@ -5,13 +5,13 @@
     margin-block-start: 60px;
     border-bottom: 1px solid #AFAFAF;
     
-    div:first-child {
+    .navigation {
         display: flex;
         gap: 6.25rem;
         align-items: baseline;
     }
 
-    div:last-child {
+    .action {
         display: flex;
         gap: 2.5rem;
         align-items: center;

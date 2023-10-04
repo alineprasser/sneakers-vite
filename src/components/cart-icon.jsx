@@ -1,6 +1,14 @@
-export default function Cart({ fill = "black", width = 32, height = 32 }) {
+export default function Cart({
+  fill = "black",
+  width = 32,
+  height = 32,
+  onClick = () => {},
+  className = "",
+}) {
   return (
     <svg
+      className={className}
+      onClick={onClick}
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}

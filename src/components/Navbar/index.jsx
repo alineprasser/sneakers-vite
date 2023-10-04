@@ -4,7 +4,7 @@ import CartControl from "../CartControl";
 export default function Navbar() {
   return (
     <header className="navbar">
-      <div>
+      <div className="navigation">
         <h2 className="title">
           <a href="/">Sneakers</a>
         </h2>
@@ -15,7 +15,7 @@ export default function Navbar() {
           <li>About</li>
         </ul>
       </div>
-      <div>
+      <div className="action">
         <CartControl />
         <img
           src="/dog.jpg"
