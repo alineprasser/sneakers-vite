@@ -8,43 +8,48 @@
     .cart-popover {
         display: flex;
         flex-direction: column;
-        overflow: auto;
-        max-height: 200px;
-        gap: 12px;
-    
-        .cart-item {
-            background-color: var(--bg-color);
+        gap: 15px;        
+        .cart-list {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            font-size: 10px;
-            padding: 10px;
-            min-height: 50px;
-            
-            img {
-                width: 50px;
-                height: 50px;
-            }
-            .cart-description {
+            flex-direction: column;
+            gap: 12px;
+            overflow: auto;
+            max-height: 200px;
+            .cart-item {
+                background-color: var(--bg-color);
                 display: flex;
-                flex-direction: column;
-                width: 90px;
-                gap: 6px;
-                span {
-                    color: var(--product);
-                    font-weight: 700;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+                font-size: 10px;
+                padding: 10px;
+                min-height: 50px;
+                
+                img {
+                    width: 50px;
+                    height: 50px;
                 }
-    
-                .cart-details {
+                .cart-description {
                     display: flex;
-                    justify-content: space-between;
-                    font-size: 8px;
+                    flex-direction: column;
+                    width: 90px;
+                    gap: 6px;
+                    span {
+                        color: var(--product);
+                        font-weight: 700;
+                    }
+        
+                    .cart-details {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 8px;
+                    }
                 }
-            }
-        }    
+            }    
+        }
+    
     }
 
     .checkout-btn {
