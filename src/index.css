@@ -3,9 +3,9 @@
 :root {
   font-family: 'Kulim Park', sans-serif;
   --primary: #E4A946;
-  --logo: #000;
+  --black: #000;
   --product: #464035;
-  --btn-default: #FFF;
+  --white: #FFF;
   --btn-shadow: drop-shadow(0px 0px 4px #E4A946);
   --disccount-tag: #FFE6BD;
 
@@ -28,6 +28,6 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--btn-default);
+  background-color: var(--white);
   cursor: pointer;
 }

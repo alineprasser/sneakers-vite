@@ -73,7 +73,7 @@ export default function Product() {
           <button
             className="addToCart"
             onClick={addItemToCart}>
-            <Cart fill="var(--btn-default)" />
+            <Cart fill="var(--white)" />
             Add to cart
           </button>
         </div>

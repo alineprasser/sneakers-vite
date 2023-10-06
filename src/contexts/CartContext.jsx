@@ -13,11 +13,19 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
+  const formatMoney = (value) => {
+    return value.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+  };
+
   return (
     <CartContext.Provider
       value={{
         cartItems,
         setCartItems,
+        formatMoney,
       }}>
       {children}
     </CartContext.Provider>

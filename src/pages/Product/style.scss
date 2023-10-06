@@ -38,7 +38,7 @@
     
             &:hover {
                 background-color: var(--primary);
-                color: var(--btn-default);
+                color: var(--white);
                 transition: all 0.2s ease;
             }
         }
@@ -47,7 +47,7 @@
     .highlight_btn {
         background-color: var(--primary) !important;
         filter: var(--btn-shadow);
-        color: var(--btn-default);
+        color: var(--white);
     }
     
     .fullPrice {
@@ -90,7 +90,7 @@
         border-radius: 8px;
         font-weight: 700;
         width: 155px;
-        background-color: var(--btn-default);
+        background-color: var(--white);
         user-select: none;
     
         button {
@@ -104,7 +104,7 @@
         align-items: center;
         justify-content: center;
         gap: 25px;
-        color: var(--btn-default);
+        color: var(--white);
         background-color: var(--primary);
         filter: var(--btn-shadow);
         width: 207px;
