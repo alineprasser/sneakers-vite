@@ -1,8 +1,17 @@
+import { useState } from "react";
 import Input from "../../components/Input";
 import { useCartContext } from "../../contexts/CartContext";
 import "./styles.scss";
 
 export default function Checkout() {
+  const [nome, setNome] = useState("");
+  const [phone, setPhone] = useState("");
+  const [cep, setCep] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [numero, setNumero] = useState("");
+  const [estado, setEstado] = useState("");
+  const [logradouro, setLogradouro] = useState("");
+
   const { cartItems, formatMoney } = useCartContext();
 
   const calculateTotal = (price, quantity) => {
@@ -18,22 +27,69 @@ export default function Checkout() {
     return formatMoney(total);
   };
 
+  const handleCEP = async () => {
+    //
+  };
+
   return (
     <div className="checkout">
       <div className="checkout-form">
-        <Input label="Nome completo:" />
-        <Input label="Telefone:" />
+        <Input
+          label="Nome completo:"
+          value={nome}
+          onChange={(e) => {
+            setNome(e.target.value);
+          }}
+        />
+        <Input
+          label="Telefone:"
+          value={phone}
+          onChange={(e) => {
+            setPhone(e.target.value);
+          }}
+        />
         <div className="double-column">
           <div>
-            <Input label="CEP:" />
-            <Input label="Cidade:" />
+            <Input
+              label="CEP:"
+              value={cep}
+              onChange={(e) => {
+                setCep(e.target.value);
+              }}
+              onBlur={handleCEP}
+            />
+            <Input
+              label="Cidade:"
+              value={cidade}
+              onChange={(e) => {
+                setCidade(e.target.value);
+              }}
+            />
           </div>
           <div>
-            <Input label="Número:" />
-            <Input label="Estado:" />
+            <Input
+              label="Número:"
+              value={numero}
+              onChange={(e) => {
+                setNumero(e.target.value);
+              }}
+            />
+            <Input
+              label="Estado:"
+              value={estado}
+              onChange={(e) => {
+                setEstado(e.target.value);
+              }}
+            />
           </div>
         </div>
-        <Input label="Logradouro:" />
+        <Input
+          label="Logradouro:"
+          value={logradouro}
+          onChange={(e) => {
+            setLogradouro(e.target.value);
+          }}
+        />
         <div>
           <button className="checkout-btn">Finalizar</button>
         </div>
@@ -70,8 +126,12 @@ export default function Checkout() {
               </div>
             );
           })}
-          <hr />
-          <p>{calculateFinalPrice()}</p>
+          {cartItems.length > 1 && (
+            <>
+              <hr />
+              <p>{calculateFinalPrice()}</p>
+            </>
+          )}
         </div>
       </div>
     </div>
