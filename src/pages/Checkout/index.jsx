@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../../components/Input";
 import { useCartContext } from "../../contexts/CartContext";
 import "./styles.scss";
+import axios from "axios";
 
 export default function Checkout() {
   const [nome, setNome] = useState("");
@@ -27,8 +28,21 @@ export default function Checkout() {
     return formatMoney(total);
   };
 
-  const handleCEP = async () => {
-    //
+  const handleCEP = () => {
+    let cleanCep = cep.replace(/[^a-zA-Z0-9]/g, "");
+    axios
+      .get(`http://viacep.com.br/ws/${cleanCep}/json/`)
+      .then((response) => {
+        const { data } = response;
+        setCidade(data.localidade);
+        setEstado(data.uf);
+        setLogradouro(data.logradouro);
+      })
+      .catch(() => {
+        setCidade("");
+        setEstado("");
+        setLogradouro("");
+      });
   };
 
   return (

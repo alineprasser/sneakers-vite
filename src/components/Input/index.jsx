@@ -5,12 +5,13 @@ export default function Input({
   onChange = () => {},
   onBlur = () => {},
   value,
+  type = "text",
 }) {
   return (
     <div className="default-input">
       <label>{label}</label>
       <input
-        type="text"
+        type={type}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
