@@ -44,9 +44,9 @@ export default function Product() {
         <span className="section">SNEAKER COMPANY</span>
         <h1 className="product">Fall Limited Edition Sneakers</h1>
         <p>
-          These low-profile senakers are your perfect casual wear, companion.
-          Featuring a durable rubber outer sole, they&apos;ll withstand
-          everything the weather can offer
+          Estes tênis de baixo perfil são o seu companheiro casual perfeito.
+          Apresentando uma sola externa de borracha durável, eles resistirão a
+          tudo o que o clima pode oferecer
         </p>
         <div className="sizelist">
           {sizeList.map((item) => {
@@ -74,7 +74,7 @@ export default function Product() {
             className="addToCart"
             onClick={addItemToCart}>
             <Cart fill="var(--white)" />
-            Add to cart
+            Adicionar
           </button>
         </div>
       </div>

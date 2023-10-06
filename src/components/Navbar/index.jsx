@@ -10,10 +10,10 @@ export default function Navbar() {
           <Link to="/">Sneakers</Link>
         </h2>
         <ul>
-          <li>Collection</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
+          <li>Coleções</li>
+          <li>Masculino</li>
+          <li>Feminino</li>
+          <li>Sobre</li>
         </ul>
       </div>
       <div className="action">
