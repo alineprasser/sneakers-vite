@@ -1,12 +1,13 @@
 import "./styles.scss";
 import CartControl from "../CartControl";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navigation">
         <h2 className="title">
-          <a href="/">Sneakers</a>
+          <Link to="/">Sneakers</Link>
         </h2>
         <ul>
           <li>Collection</li>

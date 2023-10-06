@@ -5,15 +5,22 @@ import Trash from "../trash";
 
 import "./styles.scss";
 import Popover from "../Popover";
+import { useNavigate } from "react-router-dom";
 
 export default function CartControl() {
   const { cartItems, setCartItems } = useCartContext();
   const [showPopover, setShowPopover] = useState(false);
+  const navigate = useNavigate();
 
   const handleRemoveItem = (index) => {
     let newCartItems = [...cartItems];
     newCartItems.splice(index, 1);
     setCartItems(newCartItems);
+  };
+
+  const handleCheckout = () => {
+    setShowPopover(false);
+    navigate("/checkout");
   };
 
   return (
@@ -57,10 +64,14 @@ export default function CartControl() {
                     );
                   })}
                 </div>
-                <button className="checkout-btn">Finalizar</button>
+                <button
+                  className="checkout-btn"
+                  onClick={handleCheckout}>
+                  Finalizar
+                </button>
               </div>
             ) : (
-              <span>Carrinho vazio!</span>
+              <span>Empty cart!</span>
             )}
           </Popover>
         )}
