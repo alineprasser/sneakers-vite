@@ -1,6 +1,6 @@
 import Input from "../../components/Input";
 import { useCartContext } from "../../contexts/CartContext";
-import "./style.scss";
+import "./styles.scss";
 
 export default function Checkout() {
   const { cartItems, formatMoney } = useCartContext();

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCartContext } from "../../contexts/CartContext";
 import Cart from "../../components/cart-icon";
 
-import "./style.scss";
+import "./styles.scss";
 import ImageCarousel from "../../components/ImageCarousel";
 
 export default function Product() {
